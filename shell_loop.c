@@ -7,7 +7,9 @@
  *
  * Return: 0 on success, 1 on error, or error code
  */
+
 int hsh(info_t *info, char **av)
+
 {
 	ssize_t r = 0;
 	int builtin_ret = 0;
@@ -52,7 +54,9 @@ int hsh(info_t *info, char **av)
  * 	1 if builtin found but not successful,
  * 	2 if builtin signals exit()
  */
+
 int find_builtin(info_t *info)
+
 {
 	int i, built_in_ret = -1;
 	builtin_table builtintbl[] = {
@@ -78,12 +82,14 @@ int find_builtin(info_t *info)
 }
 
 /**
- * find_cmd - finds a command in PATH
+ * find_cmd - finds the command in PATH
  * @info: the parameter & return info struct
  *
- * Return: void
+ * Return:the void
  */
+
 void find_cmd(info_t *info)
+
 {
 	char *path = NULL;
 	int i, k;
@@ -121,11 +127,13 @@ void find_cmd(info_t *info)
 
 /**
  * fork_cmd - forks a an exec thread to run cmd
- * @info: the parameter & return info struct
+ * @info: a parameter & return info struct
  *
- * Return: void
+ * Return: the void
  */
+
 void fork_cmd(info_t *info)
+
 {
 	pid_t child_pid;
 
